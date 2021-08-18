@@ -1,48 +1,34 @@
-var n = 100;
-var x = [], y = [], z = [];
-var dt = 0.015;
+// Ingest data
+// Normalize (add 0s if needed)
+// shape
+let data = []
+append_fake_data();
+console.log(data);
 
-for (i = 0; i < n; i++) {
-  x[i] = Math.random() * 2 - 1;
-  y[i] = Math.random() * 2 - 1;
-  z[i] = 30 + Math.random() * 10;
-}
-
+// Grab the DOM element to give to plotly
 var graphDiv = document.getElementById('graph')
-Plotly.newPlot(graphDiv, [{
-  x: x,
-  y: z,
-  mode: 'markers'
-}], {
-  xaxis: {range: [-40, 40]},
-  yaxis: {range: [0, 60]}
-})
 
-function compute () {
-  var s = 10, b = 8/3, r = 28;
-  var dx, dy, dz;
-  var xh, yh, zh;
-  for (var i = 0; i < n; i++) {
-    dx = s * (y[i] - x[i]);
-    dy = x[i] * (r - z[i]) - y[i];
-    dz = x[i] * y[i] - b * z[i];
+// TODO take the structured data from GraphData & turn it into a graph
+graph_from_GraphData(gd) {
+  // Pull the data outta the GraphData object and put it into X/Y arrays
+  // let x = ...
 
-    xh = x[i] + dx * dt * 0.5;
-    yh = y[i] + dy * dt * 0.5;
-    zh = z[i] + dz * dt * 0.5;
-
-    dx = s * (yh - xh);
-    dy = xh * (r - zh) - yh;
-    dz = xh * yh - b * zh;
-
-    x[i] += dx * dt;
-    y[i] += dy * dt;
-    z[i] += dz * dt;
-  }
+  // Create a new graph
+  Plotly.newPlot(graphDiv, [{
+    x: x,
+    y: z,
+    mode: 'markers'
+  }], {
+    xaxis: {range: [-40, 40]},
+    yaxis: {range: [0, 60]}
+  })
 }
 
+/******************************************************************************/
+// Advance the plot by 1 step
 function update () {
-  compute();
+  // Get the next pieces of data into the right spot
+  // compute();
 
   Plotly.animate(graphDiv, {
     data: [{x: x, y: z}]
