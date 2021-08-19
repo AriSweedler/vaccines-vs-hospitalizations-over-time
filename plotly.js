@@ -1,55 +1,60 @@
-// Ingest data
-// Normalize (add 0s if needed)
-// shape
-let data = []
-append_fake_data(data);
-console.log("fake data: ", data);
-console.log("fake GraphData: ", data[0]);
 
-// Grab the DOM element to give to plotly
-var graphDiv = document.getElementById('graph');
 
-// TODO take the structured data from GraphData & turn it into a graph
-function graph_from_GraphData(gd) {
-  // Pull the data outta the GraphData object:
-  // * X is percent fully vaccinated (0 to 100)
-  // * Y is hospitalizations per 100,000 residents
-  let x = gd.states.map(state => state.vacc_rate);
-  let y = gd.states.map(state => state.hosp_rate);
-  console.log("Vacc rate list: ", x)
-  console.log("Hosp rate list: ", y)
 
-  // Create a new graph
-  Plotly.newPlot(graphDiv, [{
-    x: x,
-    y: y,
-    mode: 'markers'
-  }], {
-    xaxis: {range: [0, 1]},
-    yaxis: {range: [0, 1]}
-  })
+
+let vaccination_data = []
+append_fake_data(vaccination_data);
+
+const plot_options = {
+  xaxis: {range: [0, 1]},
+  yaxis: {range: [0, 1]},
+  showlegend: true,
+  legend: {
+    bgcolor: '#E2E2E2',
+    bordercolor: '#2F2F2F',
+    borderwidth: 2,
+    x: 0.3,
+    y: 0.3
+  }
 }
-graph_from_GraphData(data[0]);
+var g_graphDiv = document.getElementById('graph');
+function init_graph() {
+  // First piece of data
+  let trace = vaccination_data[next_index()].to_plotly_trace();
+  trace.mode = 'markers'
+  trace.name = "Stuff"
+  let data = [trace]
+
+  // Grab the DOM element to give to plotly
+  Plotly.newPlot(g_graphDiv, data, plot_options);
+}
+
+// Helper function to let us step through the 'vaccination_data' array
+let index = -1;
+function next_index() {
+  index = (index + 1) % vaccination_data.length;
+  return index;
+}
 
 /******************************************************************************/
-// Advance the plot by 1 step
-function update () {
-  // Get the next pieces of data into the right spot
-  // compute();
 
-  Plotly.animate(graphDiv, {
-    data: [{x: x, y: z}]
-  }, {
-    transition: {
-      duration: 0
-    },
-    frame: {
-      duration: 0,
-      redraw: false
-    }
-  });
+// Hardcoded parameter to tell plotly how to animate between our GraphDatas
+const animation_options = {
+  transition: { duration: 100 },
+  frame: {
+    duration: 1000,
+  }
+}
 
+// Function to advance the plot by 1 step (adds itself to the event queue, too)
+function update() {
+  let l_data = {
+    "data": [vaccination_data[next_index()].to_plotly_trace()],
+  };
+  Plotly.animate(g_graphDiv, l_data, animation_options);
   requestAnimationFrame(update);
 }
 
+// Start
+init_graph();
 requestAnimationFrame(update);
