@@ -16,6 +16,15 @@ class GraphData {
     // List of states
     this.states = states
   }
+
+  // Type gymnastics: go from a GraphData object to something plotly can
+  // directly use.
+  to_plotly_format() {
+    return {
+      x: this.states.map(state => state.vacc_rate),
+      y: this.states.map(state => state.hosp_rate),
+    };
+  }
 }
 
 class State {
