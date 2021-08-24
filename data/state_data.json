@@ -1,0 +1,226 @@
+{
+  "AL": {
+    "display_name": "Alabama",
+    "population": 5024279
+  },
+  "AK": {
+    "display_name": "Alaska",
+    "population": 733391
+  },
+  "AZ": {
+    "display_name": "Arizona",
+    "population": 7151502
+  },
+  "AR": {
+    "display_name": "Arkansas",
+    "population": 3011524
+  },
+  "CA": {
+    "display_name": "California",
+    "population": 39538223
+  },
+  "CO": {
+    "display_name": "Colorado",
+    "population": 5773714
+  },
+  "CT": {
+    "display_name": "Connecticut",
+    "population": 3605944
+  },
+  "DE": {
+    "display_name": "Delaware",
+    "population": 989948
+  },
+  "DC": {
+    "display_name": "District of Columbia",
+    "population": 689545
+  },
+  "FL": {
+    "display_name": "Florida",
+    "population": 21538187
+  },
+  "GA": {
+    "display_name": "Georgia",
+    "population": 10711908
+  },
+  "HI": {
+    "display_name": "Hawaii",
+    "population": 1455271
+  },
+  "ID": {
+    "display_name": "Idaho",
+    "population": 1839106
+  },
+  "IL": {
+    "display_name": "Illinois",
+    "population": 12812508
+  },
+  "IN": {
+    "display_name": "Indiana",
+    "population": 6785528
+  },
+  "IA": {
+    "display_name": "Iowa",
+    "population": 3190369
+  },
+  "KS": {
+    "display_name": "Kansas",
+    "population": 2937880
+  },
+  "KY": {
+    "display_name": "Kentucky",
+    "population": 4505836
+  },
+  "LA": {
+    "display_name": "Louisiana",
+    "population": 4657757
+  },
+  "ME": {
+    "display_name": "Maine",
+    "population": 1362359
+  },
+  "MD": {
+    "display_name": "Maryland",
+    "population": 6177224
+  },
+  "MA": {
+    "display_name": "Massachusetts",
+    "population": 7029917
+  },
+  "MI": {
+    "display_name": "Michigan",
+    "population": 10077331
+  },
+  "MN": {
+    "display_name": "Minnesota",
+    "population": 5706494
+  },
+  "MS": {
+    "display_name": "Mississippi",
+    "population": 2961279
+  },
+  "MO": {
+    "display_name": "Missouri",
+    "population": 6154913
+  },
+  "MT": {
+    "display_name": "Montana",
+    "population": 1084225
+  },
+  "NE": {
+    "display_name": "Nebraska",
+    "population": 1961504
+  },
+  "NV": {
+    "display_name": "Nevada",
+    "population": 3104614
+  },
+  "NH": {
+    "display_name": "New Hampshire",
+    "population": 1377529
+  },
+  "NJ": {
+    "display_name": "New Jersey",
+    "population": 9288994
+  },
+  "NM": {
+    "display_name": "New Mexico",
+    "population": 2117522
+  },
+  "NY": {
+    "display_name": "New York",
+    "population": 20201249
+  },
+  "NC": {
+    "display_name": "North Carolina",
+    "population": 10439388
+  },
+  "ND": {
+    "display_name": "North Dakota",
+    "population": 779094
+  },
+  "OH": {
+    "display_name": "Ohio",
+    "population": 11799448
+  },
+  "OK": {
+    "display_name": "Oklahoma",
+    "population": 3959353
+  },
+  "OR": {
+    "display_name": "Oregon",
+    "population": 4237256
+  },
+  "PA": {
+    "display_name": "Pennsylvania",
+    "population": 13011844
+  },
+  "RI": {
+    "display_name": "Rhode Island",
+    "population": 1097379
+  },
+  "SC": {
+    "display_name": "South Carolina",
+    "population": 5118425
+  },
+  "SD": {
+    "display_name": "South Dakota",
+    "population": 886667
+  },
+  "TN": {
+    "display_name": "Tennessee",
+    "population": 6910840
+  },
+  "TX": {
+    "display_name": "Texas",
+    "population": 29145505
+  },
+  "UT": {
+    "display_name": "Utah",
+    "population": 3271616
+  },
+  "VT": {
+    "display_name": "Vermont",
+    "population": 643077
+  },
+  "VA": {
+    "display_name": "Virginia",
+    "population": 8631393
+  },
+  "WA": {
+    "display_name": "Washington",
+    "population": 7705281
+  },
+  "WV": {
+    "display_name": "West Virginia",
+    "population": 1793716
+  },
+  "WI": {
+    "display_name": "Wisconsin",
+    "population": 5893718
+  },
+  "WY": {
+    "display_name": "Wyoming",
+    "population": 576851
+  },
+  "AS": {
+    "display_name": "American Samoa",
+    "population": 49437
+  },
+  "GU": {
+    "display_name": "Guam",
+    "population": 168485
+  },
+  "MP": {
+    "display_name": "Northern Mariana Islands",
+    "population": 51433
+  },
+  "PR": {
+    "display_name": "Puerto Rico",
+    "population": 3285874
+  },
+  "VI": {
+    "display_name": "U.S. Virgin Islands",
+    "population": 106235
+  }
+}
